@@ -41,7 +41,7 @@ function(_) {
     ;
 
 
-  var pageContext = require.mozuData('pageContext');
+  var pageContext = require.mozuData('pageContext') || {};
   var videos      = document.querySelectorAll('[data-mz-widget="bcm~video"]');
   var videosList  = Array.apply(null, videos);
 
@@ -183,7 +183,7 @@ function(_) {
 
 
     // debug our model if we're in debugMode
-    if (pageContext.isDebugMode) {
+    if (pageContext && pageContext.isDebugMode) {
       console.debug('widget:', model.id, model, video);
     }
 
