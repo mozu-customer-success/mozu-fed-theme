@@ -1,4 +1,4 @@
-﻿html {
+html {
     height: 100%;
 }
 
@@ -6,9 +6,10 @@ body {
     margin: 0 auto;
     height: 100%;
     background-color: @bodyBackgroundColor;
-	font-family: @fontFamily;
+    background-image: @bodyBackgroundImage;
+    font-family: @fontFamily;
     font-size: @fontSize;
-	color: @textColor;
+    color: @textColor;
 }
 h1, h2, h3, h4, h5, h6 {
     color: @textColor;
@@ -27,7 +28,7 @@ p {
     margin: @gutter/2 0;
 }
 
-// preventing FOUT since web fonts are loading asynchronously    
+// preventing FOUT since web fonts are loading asynchronously
 html.js.fontface.wf-loading body {
     visibility: hidden;
 }
@@ -146,13 +147,13 @@ button {
 
 .mz-page-headernote {
     margin-left: 133px;
-	font-weight: normal;
+  font-weight: normal;
 }
 
 .mz-auxiliary-text {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .mz-strikethrough {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }

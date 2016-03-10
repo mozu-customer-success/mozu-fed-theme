@@ -1,4 +1,4 @@
-﻿
+
 
 .permalink (@color: white) {
     color: @color;
@@ -93,9 +93,9 @@
 	border-bottom-left-radius:          @bottomleft;
 	border-top-left-radius:             @topleft;
 
-	-moz-background-clip:    padding; 
-	-webkit-background-clip: padding-box; 
-	background-clip:         padding-box; 
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
 }
 
 .opacity (@opacity: 0.5) {
@@ -119,33 +119,35 @@
 	background: -o-radial-gradient(center, ellipse cover,  @startColor 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%);
 	background: -ms-radial-gradient(center, ellipse cover,  @startColor 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%);
 	background: radial-gradient(ellipse at center,  @startColor 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%);
-	
+
 }
 
 .animation (@name, @duration: 300ms, @delay: 0, @ease: ease, @direction: normal, @iteration-count: 1, @fill-mode: none, @play-state: running) {
   animation:         @name @duration @ease @delay @iteration-count @direction @fill-mode @play-state;
-	-webkit-animation: @name @duration @ease @delay @iteration-count @direction @fill-mode @play-state;
+  -webkit-animation: @name @duration @ease @delay @iteration-count @direction @fill-mode @play-state;
   -moz-animation:    @name @duration @ease @delay @iteration-count @direction @fill-mode @play-state;
   -ms-animation:     @name @duration @ease @delay @iteration-count @direction @fill-mode @play-state;
 }
 
 .transition (@transition) {
-	-webkit-transition: @transition;  
+	-webkit-transition: @transition;
 	-moz-transition:    @transition;
-	-ms-transition:     @transition; 
-	-o-transition:      @transition;  
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
 }
 .transition-delay (...) {
     -webkit-transition-delay: @arguments;
 	-moz-transition-delay:    @arguments;
 	-ms-transition-delay:     @arguments;
 	-o-transition-delay:      @arguments;
-}.transition-timing-function (...) {
+}
+.transition-timing-function (...) {
     -webkit-transition-timing-function: @arguments;
 	-moz-transition-timing-function:    @arguments;
 	-ms-transition-timing-function:     @arguments;
 	-o-transition-timing-function:      @arguments;
-}.transition-duration (...) {
+}
+.transition-duration (...) {
     -webkit-transition-duration: @arguments;
 	-moz-transition-duration:    @arguments;
 	-ms-transition-duration:     @arguments;
