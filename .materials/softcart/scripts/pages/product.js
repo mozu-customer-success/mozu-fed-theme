@@ -128,6 +128,7 @@ require([
             SoftCart.highlightItem(cartitem.prop('id'));
             product.isLoading(false);
           });
+          // window.location = '/cart';
         }
         else {
           product.trigger("error", {

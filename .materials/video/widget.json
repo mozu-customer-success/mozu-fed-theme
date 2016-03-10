@@ -1,7 +1,7 @@
 {
     "id": "bcm~video",
     "displayName": "Video",
-    "displayTemplate": "cms/video",
+    "displayTemplate": "bcm/video",
     "icon": "/resources/admin/widgets/08_video.png",
     "validPageTypes": [
         "*"

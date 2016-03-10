@@ -26,11 +26,12 @@
 		{% for item in model.items %}
 			<li class="soft-cart-item" data-mz-cart-item="{{ item.id }}">
 
-				<img class="soft-cart-item-image" src="{{ item.product.imageUrl }}?max=300" alt="{{ item.product.name }}" />
+				<img class="soft-cart-item-image" src="{{ item.product.imageUrl }}?size=300" alt="{{ item.product.name }}" />
 
 				<a class="soft-cart-item-title" href="{{ item.product.url }}">{{ item.product.name }} | {{ item.product.price.price|currency }}</a>
 
 				<span class="soft-cart-item-quantity">{{ labels.qty }}: {{ item.quantity }}</span>
+
 
 				<a class="soft-cart-item-action soft-cart-item-action-more" data-mz-action="increaseQuantity" data-mz-cart-item="{{ item.id }}" href="javascript:;" title="More">&#xFE3F;</a>
 

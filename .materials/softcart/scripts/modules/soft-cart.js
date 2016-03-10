@@ -11,8 +11,8 @@ define([
 
       templateName: "modules/soft-cart/soft-cart",
 
-      goToCart: function () {
-        window.location = "/cart";
+      goToCart: function (e) {
+        window.location = $(e.currentTarget).val('href');
         return false;
       },
 
