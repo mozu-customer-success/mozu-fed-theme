@@ -1,0 +1,19 @@
+# mac crap
+.DS*
+
+# zip files
+*.zip
+
+# merge originals
+*.orig
+
+# node-specific
+node_modules/
+*.log
+
+# folders
+compiled/
+
+#files
+mozu.config.json
+*workspace

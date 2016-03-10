@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://home.mozu.com",
+  "developerAccountId": 6406,
+  "developerAccount": {
+    "emailAddress": "brandtley_mcminn@volusion.com"
+  },
+  "workingApplicationKey": "DevTrain.bcm_march_2016.0.1.0.Release"
+}
