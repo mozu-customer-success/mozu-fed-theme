@@ -4,8 +4,8 @@
   "description": "The core storefront theme for Mozu.",
   "version": "0.1.0",
   "scripts": {
-    "grunt": "grunt",
-    "build": "grunt build-production",
+    "grunt": "node_modules/.bin/grunt",
+    "build": "node_modules/.bin/grunt build-production",
     "init": "node .tasks/configure-mozu-creds"
   },
   "repository": {
