@@ -1,3 +1,4 @@
+{% spaceless %}
 {% autoescape on %}
 {% block doctype %}
 <!doctype html>
@@ -54,29 +55,26 @@
 
 
         {% if pageContext.FeedUrl %}
-        <link rel="alternate" type="application/rss+xml" title="{{ pageContext.Title }}" href="{{ pageContext.FeedUrl }}" />
+            <link rel="alternate" type="application/rss+xml" title="{{ pageContext.Title }}" href="{{ pageContext.FeedUrl }}" />
         {% endif %}
-
 
 
 		{% if pageContext.CrawlerInfo.CanonicalUrl %}
-        <link rel="canonical" href="{{ pageContext.CrawlerInfo.CanonicalUrl }}">
+            <link rel="canonical" href="{{ pageContext.CrawlerInfo.CanonicalUrl }}">
         {% endif %}
 
 		{% if pageContext.CrawlerInfo.PreviousUrl %}
-        <link rel="prev" href="{{ pageContext.CrawlerInfo.PreviousUrl }}">
+            <link rel="prev" href="{{ pageContext.CrawlerInfo.PreviousUrl }}">
         {% endif %}
 
 		{% if pageContext.CrawlerInfo.NextUrl %}
-        <link rel="next" href="{{ pageContext.CrawlerInfo.NextUrl }}">
+            <link rel="next" href="{{ pageContext.CrawlerInfo.NextUrl }}">
         {% endif %}
 
 
-
         {% block stylesheets %}
-        <link rel="stylesheet" href="{% make_url "stylesheet" "/stylesheets/storefront.less" %}" title="default" />
+            <link rel="stylesheet" href="{% make_url "stylesheet" "/stylesheets/storefront.less" %}" title="default" />
         {% endblock stylesheets %}
-
 
 
         {% block head-tag-scripts %}
@@ -86,11 +84,7 @@
 
 
         {% cms_resources %}
-
-
         {% header_content %}
-
-
 
     </head>
     {% endblock head-tag %}
@@ -109,39 +103,39 @@
             {% endblock utility-bar %}
 
             {% block page-header %}
-            {% include "modules/page-header" %}
+                {% include "modules/page-header" %}
             {% endblock page-header %}
 
             {% block site-nav %}
-            {% include "modules/site-nav" %}
+                {% include "modules/site-nav" %}
             {% endblock site-nav %}
 
             <div role="main" id="page-content" class="mz-l-pagecontent">
 
                 {% block breadcrumbs %}
-                {% if themeSettings.showBreadcrumbs %}
-                {% include "modules/breadcrumbs" %}
-                {% endif %}
+                    {% if themeSettings.showBreadcrumbs %}
+                        {% include "modules/breadcrumbs" %}
+                    {% endif %}
                 {% endblock breadcrumbs %}
 
                 {% block body-content %}
-                {% dropzone "body" scope="page" %}
+                    {% dropzone "body" scope="page" %}
                 {% endblock body-content %}
 
                 {% block body-below-content %}
-                {% dropzone "body-bottom" scope="template" %}
+                    {% dropzone "body-bottom" scope="template" %}
                 {% endblock body-below-content %}
 
             </div>
 
             {% block page-footer %}
-            {% include "modules/page-footer" %}
+                {% include "modules/page-footer" %}
             {% endblock page-footer %}
 
         </div>
 
         {% block trailing-scripts %}
-        {% include "modules/trailing-scripts" %}
+            {% include "modules/trailing-scripts" %}
         {% endblock trailing-scripts %}
 
         {% visitor_tracking_pixel %}
@@ -151,3 +145,4 @@
 
 </html>
 {% endautoescape %}
+{% endspaceless %}
