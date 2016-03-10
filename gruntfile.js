@@ -5,6 +5,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mozu-appdev-sync');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('mozu-theme-helpers');
@@ -66,7 +67,8 @@ module.exports = function (grunt) {
           JSON: true,
           define: true,
           require: true,
-          Modernizr: true
+          Modernizr: true,
+          console: true
         }
       }
     },
@@ -196,7 +198,8 @@ module.exports = function (grunt) {
       },
       wipe: {
         options: {
-          action: 'deleteAll'
+          action: 'deleteAll',
+          soloOnly: false
         },
         src: '<%= mozusync.upload.src %>'
       }

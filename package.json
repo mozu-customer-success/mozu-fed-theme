@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "scripts": {
     "grunt": "node_modules/.bin/grunt",
+    "grunt:watch": "node_modules/.bin/grunt watch",
     "build": "node_modules/.bin/grunt build-production",
     "init": "node .tasks/configure-mozu-creds"
   },
