@@ -2,17 +2,19 @@
 	"folders":
 	[
 		{
-			"path": ".",
-			"folder_exclude_patterns": [
+			"file_exclude_patterns":
+			[
+				"*.base",
+				"*.zip",
+				"*thumb*",
+				"LICENSE"
+			],
+			"folder_exclude_patterns":
+			[
 				"node_modules",
 				"compiled"
 			],
-			"file_exclude_patterns": [
-				"*.base",
-                "*.zip",
-                "*thumb*",
-                "LICENSE"
-			]
+			"path": "."
 		}
 	]
 }
