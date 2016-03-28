@@ -6,12 +6,24 @@
   "scripts": {
     "grunt": "node_modules/.bin/grunt",
     "grunt:watch": "node_modules/.bin/grunt watch",
+    "mozu:config": "node .tasks/grunt-mozu-config",
     "build": "node_modules/.bin/grunt build-production",
     "init": "node .tasks/configure-mozu-creds"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mozu/core-theme.git"
+  },
+  "engines": {
+    "node": ">=0.4"
+  },
+  "dependencies": {
+    "backbone": "1.1.2",
+    "bootstrap": "3.2.0",
+    "jquery-colorbox": "1.5.15",
+    "jquery.cookie": "1.4.1",
+    "typeahead.js": "0.10.5",
+    "underscore": "1.6.0"
   },
   "devDependencies": {
     "chalk": "^1.1.1",
@@ -26,18 +38,8 @@
     "load-grunt-tasks": "^3.4.1",
     "lodash": "^4.6.1",
     "mozu-theme-helpers": "^1.2.2",
+    "prompt": "^1.0.0",
     "time-grunt": "^1.2.2"
-  },
-  "engines": {
-    "node": ">=0.4"
-  },
-  "dependencies": {
-    "backbone": "1.1.2",
-    "bootstrap": "3.2.0",
-    "jquery-colorbox": "1.5.15",
-    "jquery.cookie": "1.4.1",
-    "typeahead.js": "0.10.5",
-    "underscore": "1.6.0"
   },
   "exportsOverride": {
     "bootstrap": [
