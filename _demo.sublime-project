@@ -8,7 +8,10 @@
 				"compiled"
 			],
 			"file_exclude_patterns": [
-				"*.base"
+				"*.base",
+                "*.zip",
+                "*thumb*",
+                "LICENSE"
 			]
 		}
 	]

@@ -2,13 +2,10 @@
 module.exports = function (grunt) {
   'use strict';
   var pkg = grunt.file.readJSON('./package.json');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-mozu-appdev-sync');
-  grunt.loadNpmTasks('grunt-newer');
+
   grunt.loadNpmTasks('mozu-theme-helpers');
+
+  require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
   grunt.initConfig({

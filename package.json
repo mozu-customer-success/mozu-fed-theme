@@ -23,6 +23,7 @@
     "grunt-contrib-watch": "~0.6",
     "grunt-mozu-appdev-sync": "^2.1.0",
     "grunt-newer": "^1.1.1",
+    "load-grunt-tasks": "^3.4.1",
     "lodash": "^4.6.1",
     "mozu-theme-helpers": "^1.2.2",
     "time-grunt": "^1.2.2"
