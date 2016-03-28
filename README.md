@@ -52,7 +52,7 @@ We recommend using [Git Bash](https://msysgit.github.io/) which is a fully featu
             - [https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server#how-to-install-using-nvm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server#how-to-install-using-nvm)
 
 
-## Next steps
+## Setting up the project folder
 
 We will need a project folder to host our theme(s), so in your shell app, enter the following commands:
 
@@ -81,9 +81,11 @@ $ npm run grunt
 If the build runs without fail, you're ready to get started!
 
 
-## Final installation notes
+## Next steps
 
 We will be performing this same set of instructions as part of our theme setup check during training, though we highly suggest attempting these instructions prior to your scheduled training date helps to identify potential system issues ahead of time.
+
+Additionally, look for an invitation to the Developer Training Dev account in the email you provided when you registered.
 
 
 Happy Coding!
