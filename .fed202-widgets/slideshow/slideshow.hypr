@@ -1,0 +1,121 @@
+
+{% require_script "widgets/slideshow" %}
+
+{# TODO: consider allocating this into it's own stylesheet #}
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
+
+
+<div data-mz-widget="slideshow" data-slick="{% json_attribute model.config %}" data-widget-config="{% json_attribute model %}">
+
+	{% with model.config as slides  %}
+
+		{% if model.config.lazyLoadImages %}
+			{% set_var srcOrLazy "data-lazy" %}
+		{% else %}
+			{% set_var srcOrLazy "src" %}
+		{% endif %}
+
+
+		{# SLIDE ONE #}
+		{% if slides.slideImage1 %}
+			<div>
+				{% if slides.slideUrl1Custom %}
+					<a href="{{ slides.slideUrl1Custom }}">
+				{% else %}
+					{% if slides.slideUrl1 %}
+						<a href="{{ slides.slideUrl1 }}">
+					{% endif %}
+				{% endif %}
+
+					<img {{ srcOrLazy }}="{{ slides.slideImage1.imageUrl }}" alt="{% if slides.slideImage1.altText %}{{ slides.slideImage1.altText }}{% endif %}">
+
+				{% if slides.slideUrl1 or slides.slideUrl1Custom %}
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+
+
+		{# SLIDE TWO #}
+		{% if slides.slideImage2 %}
+			<div>
+				{% if slides.slideUrl2Custom %}
+					<a href="{{ slides.slideUrl2Custom }}">
+				{% else %}
+					{% if slides.slideUrl2 %}
+						<a href="{{ slides.slideUrl2 }}">
+					{% endif %}
+				{% endif %}
+
+				<img {{ srcOrLazy }}="{{ slides.slideImage2.imageUrl }}" alt="{% if slides.slideImage2.altText %}{{ slides.slideImage2.altText }}{% endif %}">
+
+				{% if slides.slideUrl2 or slides.slideUrl2Custom %}
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+
+
+		{# SLIDE THREE #}
+		{% if slides.slideImage3 %}
+			<div>
+				{% if slides.slideUrl3Custom %}
+					<a href="{{ slides.slideUrl3Custom }}">
+				{% else %}
+					{% if slides.slideUrl3 %}
+						<a href="{{ slides.slideUrl3 }}">
+					{% endif %}
+				{% endif %}
+
+					<img {{ srcOrLazy }}="{{ slides.slideImage3.imageUrl }}" alt="{% if slides.slideImage3.altText %}{{ slides.slideImage3.altText }}{% endif %}">
+
+				{% if slides.slideUrl3 or slides.slideUrl3Custom %}
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+
+
+		{# SLIDE FOUR #}
+		{% if slides.slideImage4 %}
+			<div>
+				{% if slides.slideUrl4Custom %}
+					<a href="{{ slides.slideUrl4Custom }}">
+				{% else %}
+					{% if slides.slideUrl4 %}
+						<a href="{{ slides.slideUrl4 }}">
+					{% endif %}
+				{% endif %}
+
+					<img {{ srcOrLazy }}="{{ slides.slideImage4.imageUrl }}" alt="{% if slides.slideImage4.altText %}{{ slides.slideImage4.altText }}{% endif %}">
+
+				{% if slides.slideUrl4 or slides.slideUrl4Custom %}
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+
+
+		{# SLIDE FIVE #}
+		{% if slides.slideImage5 %}
+			<div>
+				{% if slides.slideUrl5Custom %}
+					<a href="{{ slides.slideUrl5Custom }}">
+				{% else %}
+					{% if slides.slideUrl5 %}
+						<a href="{{ slides.slideUrl5 }}">
+					{% endif %}
+				{% endif %}
+
+					<img {{ srcOrLazy }}="{{ slides.slideImage5.imageUrl }}" alt="{% if slides.slideImage5.altText %}{{ slides.slideImage5.altText }}{% endif %}">
+
+				{% if slides.slideUrl5 or slides.slideUrl5Custom %}
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+
+
+	{% endwith %}
+
+</div>
